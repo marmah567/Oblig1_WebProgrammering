@@ -10,7 +10,10 @@
 </h3>
   
 <p>
-  This is project is supposed to be a site for booking tickets online. The user can enter their full name, email and telephone number, 
+  This project is supposed to be a site for buying tickets online. The user can enter their full name, email and phone number, 
   choose which movie they want to see and how many tickets they wish to buy. 
-  They can se all their tickets under "All Tickets", and if they wish, the tickets can be deleted too.
+  They can se all their tickets under "All Tickets", and if they wish, delete the tickets too.
+</p>
+<p>
+  Repository: https://github.com/marmah567/Oblig1_WebProgrammering 
 </p>
