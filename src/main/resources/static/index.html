@@ -3,11 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="oblig1.js"></script>
 </head>
 <body>
     <h1>
-        Heading
+        Booking Cinema Tickets
     </h1>
+
+    <form>
+
+            <label>
+                    Choose a movie:
+                    <select>
+                        <option name="movieOption">No One Will Save You</option>
+                        <option name="movieOption">Canceled</option>
+                        <option name="movieOption">The Boogeyman</option>
+                        <option name="movieOption">Knock at the Cabin</option>
+                        <option name="movieOption">Missing</option>
+                        <option name="movieOption">Nowhere</option>
+                        <option name="movieOption">The Dive</option>
+                    </select>
+            </label>
+        <br><br>
+            <label>
+                Number of tickets:
+                <input type="text" name="quantity" pattern="[0-99]" size="2" required>
+            </label>
+        <br><br>
+            <table>
+                <tr>
+                    <td>
+                        Firstname:
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" name="firstname" pattern="[A-Za-z]{1,}" required>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lastname:
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" name="lastname" pattern="[a-z]{1,}" required>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Telephone:
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" name="telephone" pattern="[0-9]{8}" required>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" name="email"
+                                   pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Book ticket" id="bookTicket" onclick="bookticket()">
+        </form>
+
+    <h2>All tickets</h2>
+    <ul id="tickets" >
+
+    </ul>
+
+    <button onclick="deleteticket()">Delete all tickets</button>
 
 </body>
 </html>
