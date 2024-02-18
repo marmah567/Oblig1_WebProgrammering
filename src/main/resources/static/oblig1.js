@@ -20,7 +20,7 @@ allTickets = allTickets.push(tickets);
 function showTicket(){
 
     let out = "<table><tr>" +
-        "<th>Name</th><th>Email</th><th>Telephone</th><th>Movie</th><th>Number of tickets</th>" +
+        "<th>Name</th><th>E-mail</th><th>Telephone</th><th>Movie</th><th>Number of tickets</th>" +
         "</tr>";
     for (let t of allTickets){
         out += "<tr>";
