@@ -1,5 +1,16 @@
-<p>
-  This is project is supposed to be a site for booking tickets online. You can enter your full name, email and telephone, 
-  choose which movie you want to see and how many tickets you wish to buy. You can se all your tickets under "All Tickets", and if you wish, you can delete them, too.
+<h1>
+  WEBPROGRAMMERING OBLIG 1 DATA 1700
+</h1>
+<h2>
+  Booking site for Cinema Tickets
+</h2>
 
+<h3>
+  Short description:
+</h3>
+  
+<p>
+  This is project is supposed to be a site for booking tickets online. The user can enter their full name, email and telephone, 
+  choose which movie they want to see and how many tickets they wish to buy. 
+  They can se all their tickets under "All Tickets", and if they wish, the tickets can be deleted too.
 </p>
