@@ -3,86 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="oblig1.js"></script>
 </head>
 <body>
-    <h1>
-        Booking Cinema Tickets
-    </h1>
+<script src="oblig1.js"></script>
 
-    <form>
+<h1>Buy Cinema Tickets</h1>
 
-            <label>
-                    Choose a movie:
-                    <select>
-                        <option name="movieOption">No One Will Save You</option>
-                        <option name="movieOption">Canceled</option>
-                        <option name="movieOption">The Boogeyman</option>
-                        <option name="movieOption">Wonka</option>
-                        <option name="movieOption">Missing</option>
-                        <option name="movieOption">Nowhere</option>
-                        <option name="movieOption">The Dive</option>
-                    </select>
-            </label>
-        <br><br>
-            <label>
-                Number of tickets:
-                <input type="text" id="quantity" pattern="[0-99]" size="2" required>
-            </label>
-        <br><br>
-            <table>
-                <tr>
-                    <td>
-                        Firstname:
-                    </td>
-                    <td>
-                        <label>
-                            <input type="text" id="firstname" pattern="[A-Za-z]{1,}" required>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Lastname:
-                    </td>
-                    <td>
-                        <label>
-                            <input type="text" id="lastname" pattern="[a-z]{1,}" required>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Telephone:
-                    </td>
-                    <td>
-                        <label>
-                            <input type="text" id="telephone" pattern="[0-9]{8}" required>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Email:
-                    </td>
-                    <td>
-                        <label>
-                            <input type="text" id="email"
-                                   pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
-                        </label>
-                    </td>
-                </tr>
-            </table>
-            <br>
-        <button type="submit" id="bookTicket" onclick="showTicket()">Book Ticket</button>
-    </form>
+Choose a movie:
+<select id="movies" onchange="movieValidation()">
+    <option value="default">Please choose a movie</option>
+    <option>No One Will Save You</option>
+    <option>Canceled</option>
+    <option>The Boogeyman</option>
+    <option>Wonka</option>
+    <option>Missing</option>
+    <option>Nowhere</option>
+    <option>The Dive</option>
+</select>
+<span id="errorMovie" style="color: red"></span>
+<br><br>
 
-    <h2>All tickets</h2>
-    <div id="allTickets">
+Number of tickets:
+<input type="text" id="quantity" pattern="[0-99]" size="2" onchange="numberValidation()"/>
+<span id="errorQuantity" style="color: red"></span>
 
-    </div>
+<br><br>
 
-    <button onclick="deleteticket()">Delete all tickets</button>
+<table>
+    <tr>
+        <td>
+            Firstname:
+        </td>
+        <td>
+            <input type="text" id="firstname" pattern="[A-Za-z]{1,}" onchange="firstnameValidation()" />
+            <span id="errorFname" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Lastname:
+        </td>
+        <td>
+            <input type="text" id="lastname" pattern="[a-z]{1,}" onchange="lastnameValidation()"/>
+            <span id="errorLname" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Telephone:
+        </td>
+        <td>
+            <input type="text" id="telephone" pattern="[0-9]{8}" onchange="telephoneValidation()"/>
+            <span id="errorTlf" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email:
+        </td>
+        <td>
+            <input type="text" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                   onchange="emailValidation()"/>
+            <span id="errorEmail" style="color: red"></span>
+        </td>
+    </tr>
+</table> <br>
+<button onclick="showTicket()">Buy Ticket</button>
+
+<h2>All tickets</h2>
+<div id="allTickets"></div>
+
+<button onclick="deleteticket()">Delete all tickets</button>
 
 </body>
 </html>
