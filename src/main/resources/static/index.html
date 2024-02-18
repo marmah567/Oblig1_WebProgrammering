@@ -9,7 +9,9 @@
 
 <h1>Buy Cinema Tickets</h1>
 
-Choose a movie:
+<label for="movies">
+    Choose a movie:
+</label>
 <select id="movies" onchange="movieValidation()">
     <option value="default">Please choose a movie</option>
     <option>No One Will Save You</option>
@@ -22,9 +24,10 @@ Choose a movie:
 </select>
 <span id="errorMovie" style="color: red"></span>
 <br><br>
-
-Number of tickets:
-<input type="text" id="quantity" pattern="[0-99]" size="2" onchange="numberValidation()"/>
+<label for="quantity">
+    Number of tickets:
+</label>
+<input type="text" id="quantity"  size="2" onchange="numberValidation()"/>
 <span id="errorQuantity" style="color: red"></span>
 
 <br><br>
@@ -32,38 +35,44 @@ Number of tickets:
 <table>
     <tr>
         <td>
-            Firstname:
+            <label for="firstname">
+                Firstname:
+            </label>
         </td>
         <td>
-            <input type="text" id="firstname" pattern="[A-Za-z]{1,}" onchange="firstnameValidation()" />
+            <input type="text" id="firstname" onchange="firstnameValidation()" />
             <span id="errorFname" style="color: red"></span>
         </td>
     </tr>
     <tr>
         <td>
-            Lastname:
-        </td>
+            <label for="lastname">
+                Lastname:
+            </label>
         <td>
-            <input type="text" id="lastname" pattern="[a-z]{1,}" onchange="lastnameValidation()"/>
+            <input type="text" id="lastname" onchange="lastnameValidation()"/>
             <span id="errorLname" style="color: red"></span>
         </td>
     </tr>
     <tr>
         <td>
-            Telephone:
+            <label for="telephone">
+                Telephone:
+            </label>
         </td>
         <td>
-            <input type="text" id="telephone" pattern="[0-9]{8}" onchange="telephoneValidation()"/>
+            <input type="text" id="telephone" onchange="telephoneValidation()"/>
             <span id="errorTlf" style="color: red"></span>
         </td>
     </tr>
     <tr>
         <td>
-            Email:
+            <label for="email">
+                Email:
+            </label>
         </td>
         <td>
-            <input type="text" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                   onchange="emailValidation()"/>
+            <input type="text" id="email" onchange="emailValidation()"/>
             <span id="errorEmail" style="color: red"></span>
         </td>
     </tr>

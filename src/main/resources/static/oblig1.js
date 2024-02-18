@@ -68,7 +68,7 @@ function telephoneValidation(){
 function emailValidation(){
     const email = document.getElementById("email").value;
     const errorEmail = document.getElementById("errorEmail");
-    const emailRegex = /^[a-zA-Z0-9._%&+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    const emailRegex = /^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/
 
     if (email === "") {
         errorEmail.innerText ="Please fill out your email";
@@ -104,9 +104,10 @@ let allTickets = [];
 
 function validateForm() {
     if (!checkValidation()) {
-        return;
+        return ;
     }
 }
+validateForm();
 
 function showTicket() {
     const tickets = {
