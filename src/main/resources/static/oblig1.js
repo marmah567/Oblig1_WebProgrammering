@@ -1,13 +1,12 @@
 
-let movie = document.getElementsByName("movieOption");
-let number = document.getElementsByName("quantity");
-let fname = document.getElementsByName("firstname");
-let lname = document.getElementsByName("lastname");
-let telephone = document.getElementsByName("telephone");
-let email = document.getElementsByName("email");
+const movie = document.getElementsByName("movieOption");
+const number = document.getElementById("quantity");
+const fname = document.getElementById("firstname");
+const lname = document.getElementById("lastname");
+const telephone = document.getElementById("telephone");
+const email = document.getElementById("email");
 
-showTicket();
-let allTickets = [];
+const allTickets = [];
 const tickets = {
     firstname: fname,
     lastname: lname,
@@ -16,7 +15,7 @@ const tickets = {
     movie: movie,
     number: number
 };
-allTickets = allTickets.push(tickets);
+allTickets.push(tickets);
 function showTicket(){
 
     let out = "<table><tr>" +
@@ -32,11 +31,11 @@ function showTicket(){
 }
 
 document.getElementsByName("movieOption").value = "";
-document.getElementsByName("quantity").value = "";
-document.getElementsByName("firstname").value = "";
-document.getElementsByName("lastname").value = "";
-document.getElementsByName("telephone").value = "";
-document.getElementsByName("email").value = "";
+document.getElementById("quantity").value = "";
+document.getElementById("firstname").value = "";
+document.getElementById("lastname").value = "";
+document.getElementById("telephone").value = "";
+document.getElementById("email").value = "";
 
 function deleteticket(){
     deleteticket.addEventListener("click", function (){
